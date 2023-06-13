@@ -1,0 +1,148 @@
+{% extends 'Desire/base.html' %}
+{% load static %}
+
+
+{% block title%}KiSembo DeSire's profile {% endblock title %}
+
+{% block content %}
+{% comment %} text-bg-dark {% endcomment %}
+<div class="offcanvas offcanvas-start bg-dark text-light w-auto h-auto" data-bs-scroll="true" id="demo5">
+  <div class="offcanvas-header">
+    <h3 class="offcanvas-title">DeSire.k</h3>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>
+      <a href="{% url 'Desire:homepage'%}" style="text-decoration: none;color:white">
+        <i class="fa fa-house me-2" ></i>Home
+      </a>
+    </p>
+    <hr style="color:white">
+    <h5>Media platforms<h5>
+    <ul style="list-style-type: none; padding-left:0px">
+      <li><a href="https://twitter.com/desire_kisembo"><i class="fa-brands fa-square-twitter" style="color:blue"></i>
+        </a>
+      </li>
+      <li> 
+        <a href="https://wa.me/+256758529677"><i class="fa-brands fa-whatsapp " style="color:green"></i>
+        </a>
+      </li>
+      <li>
+        <a href="mailto:pitropa09@gmail.com">
+          <i class="fa fa-envelope " style="color:white"></i>
+        </a>
+      </li>
+    </ul>
+
+    <hr style="color:white">
+    <h5>Contacts<h5>
+    <ul style="list-style-type: none;padding-left:0px ; padding-left:0px">
+      <li><a class="btn" data-bs-toggle="collapse" href="#collapseContacts" role="button" aria-expanded="false", aria-controls="collapseContacts" >
+        <i class="fa fa-phone" style="color:blue"></i>
+      </a>
+    </li>
+    </ul>
+    <div class="collapse" id="collapseContacts">
+      <p data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mtn Uganda">+256 786822333</p>
+      <p data-bs-toggle="tooltip" data-bs-placement="bottom" title="Airtel Uganda and the one on whatsapp">+256 758529677</p>
+    </div>
+
+    <hr style="color:white">
+    <ul style="list-style-type: none;padding-left:0px">
+      <li><a class="dropdown-item" href="{% url 'admin:index'%}">Admin</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="container mt-2 mb-2">
+    <div class="card border-0 m-auto" style="width: 18rem;">
+        <img src="{% static 'image/desire.jpg'%}" class="card-img-top rounded-circle img-thumbnail" alt="DeSire's image">
+        <div class="card-body text-center">
+          <h5 class="card-title">KiSembo DeSire</h5>
+          <a href="#collapseContacts1"  class="card-link" data-bs-toggle="collapse" role="button" aria-expanded="false", aria-controls="collapseContacts1">
+            <i class="fa fa-phone" style="font-size:20px; color:blue"></i>
+          </a>
+          <a href="https://wa.me/+256758529677" class="card-link">
+        <i class="fa-brands fa-whatsapp " style="font-size:20px; color:green"></i>
+          </a>
+          <a href="https://twitter.com/desire_kisembo" class="card-link">
+            <i class="fa-brands fa-square-twitter" style="font-size:20px; color:blue"></i>
+          </a>
+        </div>
+
+
+        <div class="collapse" id="collapseContacts1" style="color:blue">
+          <p data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mtn Uganda">+256 786822333</p>
+          <p data-bs-toggle="tooltip" data-bs-placement="bottom" title="Airtel Uganda and the one on whatsapp">+256 758529677</p>
+        </div>
+
+      </div>
+
+</div>
+
+<div class="container pb-1 pt-1" style="background-color: rgb(22, 20, 20); color:white; line-height: 1.6;">
+<b>KiSembo DeSire</b> is an autodidact, passionate and devoted web application developer in <i>Python</i> 
+with <i>Django framework</i>, <i>HTML5</i>, <i>JavaScript</i>, <i>CSS</i>, <i>Bootstrap</i>, <i>jQuery</i>
+and <i> Postgresql </i>for data management.
+<br>
+While at university in year two pursuing a Bachelor's degree in pharmaceutical sciences, 
+he fell in love with computer programming and at the time he was 22 years old.
+<br>
+His dream was to create an advertisement web application so this inspired him to pursue 
+programming as an autodidact and become a full-stack developer.
+<br>
+You can hire him to develope for you any responsive web application you like just like the one you are interracting with.
+<br>
+He can be contacted by using the phone numbers which are displayed when you click any phone icon in this page, he can also be 
+contacted via whatsapp and twitter by simply clicking their icons in this page.
+<br>
+Outside pharmaceutical sciences and programming, DeSire enjoys playing football, 
+listening to music and moving to different places to see how nature thrives under natural 
+conditions with out disruption of humans. 
+<p style="text-align: center;" class="mb-1 mt-2">
+  <i class="fa fa-dove"></i>
+  <i> love nature always </i>
+  <i class="fa fa-cat"> </i> 
+  <i class="fa fa-cloud-moon-rain"></i></p>
+</div>
+
+
+{% endblock content %}
+
+{% block footer %}
+<nav class="navbar navbar-expand-sm navbar-expand-md navbar-expand-lg bg-dark fixed-bottom">
+<div class="container-fluid">
+
+
+  <div class="d-flex">
+      <a href="{% url 'Desire:homepage'%}" style="text-decoration: none;color:white">
+        <i class="fa fa-house" ></i>
+      </a>
+  </div>
+
+  <div class="d-flex">
+    <a href="https://twitter.com/desire_kisembo">
+      <i class="fa-brands fa-square-twitter me-5" style="font-size:20px; color:blue"></i>
+    </a>
+  <a href="https://wa.me/+256758529677">
+  <i class="fa-brands fa-whatsapp me-5" style="font-size:20px; color:green"></i>
+</a>
+<a href="mailto:pitropa09@gmail.com">
+  <i class="fa fa-envelope " style="color:white"></i>
+</a>
+</div>
+
+  <div class="d-flex">
+    <a href="#collapseContacts2"  class="card-link" data-bs-toggle="collapse" role="button" aria-expanded="false", aria-controls="collapseContacts2">
+      <i class="fa fa-phone" style="font-size:20px; color:blue"></i>
+    </a>
+    <div class="collapse" id="collapseContacts2" style="color:blue">
+      <p data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mtn Uganda">+256 786822333</p>
+      <p data-bs-toggle="tooltip" data-bs-placement="top" title="Airtel Uganda and the one on whatsapp">+256 758529677</p>
+    </div>
+  </div>
+
+ 
+</div>
+</nav>
+{% endblock footer %}

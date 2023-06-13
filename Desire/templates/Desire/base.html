@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%}Base{% endblock title %}</title>
+
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+
+    <!-- fontawesome css -->
+    {% comment %} <link rel="stylesheet" href="{% static 'fontawesomes/css/all.min.css'%}">  {% endcomment %}
+    {% comment %} <link href="{% static 'fontawesomes/svg/brands' %}" rel="stylesheet" type="text/css"> {% endcomment %}
+    <link href="{% static 'fontawesomes/css/brands.min.css' %}" rel="stylesheet" type="text/css">
+    {% comment %} <link href="{% static 'fontawesomes/css/solid.min.css' %}" rel="stylesheet" type="text/css"> {% endcomment %}
+</head>
+<body class="" style="padding-top: 54px; padding-bottom:40px">
+
+    {% block navbar %} 
+
+    <nav class="navbar navbar-expand-sm navbar-expand-md navbar-expand-lg bg-dark fixed-top">
+      <div class="container-fluid pt-0 pb-0 m-0 h-25">
+        
+        
+        <div class="d-flex "> 
+         
+            <a role="button" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo5">
+              <i class="fa fa-bars" style="color:white;"></i> 
+            </a>
+          
+          </div> <!-- second div -->
+          <h3 class="d-flex" style="color:white">KiSembo DeSire</h3>
+          <div class="d-flex "></div>
+          
+      </div> <!-- first div -->
+    </nav>
+
+    {% endblock navbar %} 
+
+
+    {% block content %}
+
+    {% endblock content %}
+    {% block footer %}
+    {% endblock footer %}
+
+<!-- script starts here -->
+
+
+    <!-- fontawesome js -->
+    <script src="{% static 'fontawesomes/js/all.min.js' %}"></script>
+    <script>
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+     })
+    </script>
+</body>
+</html>
